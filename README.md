@@ -1,1 +1,2 @@
 # semana06_actividad_petstore
+Agustin Peralta
