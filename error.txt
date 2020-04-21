@@ -1,0 +1,3 @@
+PS C:\Users\nicol\Desktop\semana6\semana06_actividad_petstore\APIPetstore> dotnet restore    
+
+dentro de APIPetstore aplicar ese comando 
