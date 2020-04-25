@@ -47,5 +47,11 @@ namespace Petstore.Controllers
 
             return bodyParam;
         }
+
+        [HttpGet("{petId}")]
+        public Pets Get(string petId)
+        {
+            return listPets.FirstOrDefault(p => p.id == petId);
+        }
     }
 }
