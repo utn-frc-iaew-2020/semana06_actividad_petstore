@@ -35,16 +35,29 @@ namespace Petstore.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Pets> Get()
+        public IEnumerable<Pets> GetAll()
         {
             return listPets;
+        }
+
+        [HttpGet("{petId}")]
+        public IEnumerable<Pets> Get(int petId)
+        {
+            if (!listsPets.Exists(p => p.id == petId))
+            {
+                return NotFound();
+            }
+            else
+            {
+                return listPets.FirstOrDefault(p => p.id == petId)
+            }
         }
 
         [HttpPost]
         public Pets Post(Pets bodyParam)
         {
             listPets.Add(bodyParam);
-
+            
             return bodyParam;
         }
     }
